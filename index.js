@@ -60,7 +60,18 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
- 
+   function animalNames(zzz){
+  let name = [];
+      zooAnimals.forEach(function(zoo){
+        
+      name.push(zoo.animal_name);
+      name.push(zoo.scientific_name);
+      
+    });
+    let ne = [];
+    for(let i =0; i < zooAnimals.length; i++){ ne.push(`name: ${zooAnimals[i].animal_name}, scientific: ${zooAnimals[i].scientific_name}`);}
+    return  ne
+  }
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -79,7 +90,11 @@ const zooAnimals = [
   // let ne = [];
   // for(let i =0; i < zooAnimals.length; i++){ ne.push(`${zooAnimals[i].animal_name.toLowerCase()}`);}
   // return  ne
- 
+  const lowerNames = zooAnimals.map(function(item){
+    return item.animal_name.toLowerCase();
+  });
+  return lowerNames;
+  }
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -87,7 +102,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-
+  function lowPopulationAnimals(/*Your Code Here*/){
+const newPop = zooAnimals.filter(function(item){
+  return item.population < 5;
+})
+return newPop;
+  }
+  
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -96,7 +117,16 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-   
+    function USApop(){
+    const size = [];
+    const pop = zooAnimals.reduce(function(acc, item){
+      size.push(item.state);
+      return acc + size.length;
+    }, 1);
+    return pop;
+  }
+  
+  
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -104,15 +134,31 @@ const zooAnimals = [
     * The first two parameters can take any argument (we can pass any value as an argument)
     * The last parameter accepts a callback
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
+  */
 
+  function consume(a, b, cb){
+     
+    return cb(a,b); 
+  }
+ 
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
+function add(a,b){
+     return a+b;
+  }
+
 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
+  
+function multiply(a,b){
+  /*Your Code Here*/ 
+   return a * b;
+}
+
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
