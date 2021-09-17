@@ -26,6 +26,27 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
+1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each.
+
+.map is like using a for loop on an array, .reduce takes all of the values you put into it and gives single value back, all filter dose is sends back all values that are true
+
+2. Explain the difference between a callback and a higher order function.
+
+a higher order function can take or return a function, but a callback is a function that gets passed through a higher order function
+
+3. Explain what a closure is.
+
+closure is when a inner function and use all of the putter functions
+
+4. Describe the four principles of the 'this' keyword.
+
+default binding is when 'this' is not bound to anything
+implicit binding is when 'this' is bound to a object not in a class or function
+Explicit Binding is when 'this' bound to a class or function object
+New Binding is whenever you use the new keyword 'this' gets attached to it
+
+5. Why do we need super() in an extended class?
+
 because the extended class wont work with out it
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
