@@ -36,7 +36,7 @@ a higher order function can take or return a function, but a callback is a funct
 
 3. Explain what a closure is.
 
-closure is when a inner function and use all of the putter functions
+closure is when a inner function can use all of the outter functions
 
 4. Describe the four principles of the 'this' keyword.
 
